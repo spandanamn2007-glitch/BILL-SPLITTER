@@ -2,6 +2,9 @@
 
 A beautiful web application to split expenses among friends with MongoDB backend.
 
+## 🌐 Live Demo
+Deploy this to Vercel for your presentation! See [DEPLOYMENT.md](DEPLOYMENT.md) for instructions.
+
 ## Features
 
 ✅ Add expenses with description, amount, and participants
