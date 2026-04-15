@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter - Split Expenses Easily</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Bill Splitter</h1>
+            <p class="subtitle">Split expenses with friends easily</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Add Expense Form -->
+            <section class="card form-section">
+                <h2>➕ Add New Expense</h2>
+                <form id="expenseForm">
+                    <div class="form-group">
+                        <label for="description">Expense Description</label>
+                        <input type="text" id="description" placeholder="e.g., Dinner at restaurant" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Amount Paid</label>
+                        <input type="number" id="amount" placeholder="0.00" step="0.01" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paidBy">Who Paid?</label>
+                        <input type="text" id="paidBy" placeholder="Enter name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="participants">Split Among (comma-separated names)</label>
+                        <input type="text" id="participants" placeholder="e.g., Alice, Bob, Charlie" required>
+                        <small>Include the person who paid if they're part of the split</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Expense</button>
+                </form>
+            </section>
+
+            <!-- Settlements Section -->
+            <section class="card settlements-section">
+                <h2>💸 Who Owes Whom?</h2>
+                <div id="settlements" class="settlements-list">
+                    <p class="empty-state">No settlements yet. Add expenses to see who owes whom!</p>
+                </div>
+                <button id="refreshSettlements" class="btn btn-secondary">Refresh Settlements</button>
+            </section>
+
+            <!-- Expenses List -->
+            <section class="card expenses-section">
+                <h2>📋 All Expenses</h2>
+                <div id="expensesList" class="expenses-list">
+                    <p class="empty-state">No expenses added yet.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
